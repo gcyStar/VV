@@ -1,0 +1,14 @@
+[ignore]
+.*/node_modules/.*
+.*/test/.*
+
+[include]
+./src
+
+[libs]
+
+[options]
+log.file=./log/flow.log
+module.file_ext=.js
+
+

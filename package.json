@@ -1,0 +1,30 @@
+{
+  "name": "vv",
+  "version": "0.0.1",
+  "description": "validator based on vue2",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "flow": "flow",
+    "build": "babel src/ -d lib/"
+  },
+  "keywords": [
+    "validator"
+  ],
+  "author": "gcy",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.44.0",
+    "webpack": "^2.3.3"
+  },
+  "dependencies": {
+    "vue": "^2.2.6"
+  }
+}

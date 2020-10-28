@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VV based on  Vue2.0</title>
+  <link href="../src/css/index.css" rel="stylesheet">
+</head>
+<body >
+<div id="content">
+<h1> VV  based on vue2 </h1>
+  <div id="VV">
+    <form @submit.prevent="handleSubmit">
+      <div >
+        <label>username</label>
+        <vv-input class="input" v-model="username" field="username"></vv-input>
+      </div>
+
+      <div >
+        <label>email</label>
+        <vv-input class="input" v-model="email" field="email"></vv-input>
+      </div>
+
+      <div >
+        <label>birthday</label>
+        <vv-input class="input" v-model="birthday" field="birthday"></vv-input>
+      </div>
+
+      <div >
+        <label>fn 只能是1</label>
+        <vv-input class="input" v-model="fn" field="fn"></vv-input>
+      </div>
+      <div >
+        <label>remote 只能是2</label>
+        <!--这个元素就是parent  filed字段提供给 模板元素内部使用,用来判断有没有绑定指令-->
+        <vv-input class="input" v-model="remote" field="remote"></vv-input>
+        <span>{{errors[remote]}}</span>
+      </div>
+
+      <div >
+        <label>block</label>
+
+        <vv-textarea class="textarea"  v-model="block" field="block"></vv-textarea>
+
+        <span v-text="errors.block"></span>
+      </div>
+
+      <div >
+        <input type="submit">
+      </div>
+    </form>
+    <div id="errors">
+    </div>
+  </div>
+</div>
+</body>
+<script src="../dist/VV.build.js"></script>
+</html>
